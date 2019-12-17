@@ -14,6 +14,7 @@ def parse(url):
     #multi mac has to be implemented simultaneouly with multi ip
     #all the selections will be random
     #even when you access the web page the time will be random
+    #converting lxml code to Beautiful Soup
     response = webdriver.Chrome()
     response.get(url)
     searchKeyElement = response.find_elements_by_xpath('//input[contains(@id,"destination")]')
