@@ -9,6 +9,11 @@ def parse(url):
     searchKey = "Bhubaneswar" # Change this to your city 
     checkInDate = '27/08/2016' #Format %d/%m/%Y
     checkOutDate = '29/08/2016' #Format %d/%m/%Y
+    #multi brower has to be implemented
+    #multi ip has to be implemented check ip.py file for help
+    #multi mac has to be implemented simultaneouly with multi ip
+    #all the selections will be random
+    #even when you access the web page the time will be random
     response = webdriver.Chrome()
     response.get(url)
     searchKeyElement = response.find_elements_by_xpath('//input[contains(@id,"destination")]')
