@@ -4,18 +4,30 @@ from time import sleep
 from selenium import webdriver
 from pprint import pprint
 from xvfbwrapper import Xvfb
+from random import randrange
 
 def parse(url):
     searchKey = "Bhubaneswar" # Change this to your city 
     checkInDate = '27/08/2016' #Format %d/%m/%Y
     checkOutDate = '29/08/2016' #Format %d/%m/%Y
-    #multi brower has to be implemented
+    '''
+    multi brower has to be implemented
+    '''
+    driverSelector = randrange(4)
+    if driverSelector == 0:
+        response = webdriver.Chrome()
+    if driverSelector == 1:
+        response = webdriver.Firefor()
+    if driverSelector == 2:
+        response = webdriver.Edge()
+    if driverSelector == 3:
+        response = webdriver.Safari()
     #multi ip has to be implemented check ip.py file for help
     #multi mac has to be implemented simultaneouly with multi ip
     #all the selections will be random
     #even when you access the web page the time will be random
     #converting lxml code to Beautiful Soup
-    response = webdriver.Chrome()
+    
     response.get(url)
     searchKeyElement = response.find_elements_by_xpath('//input[contains(@id,"destination")]')
     checkInElement = response.find_elements_by_xpath('//input[contains(@class,"check-in")]')
