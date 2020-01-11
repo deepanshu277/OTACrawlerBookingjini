@@ -10,6 +10,11 @@ from bs4 import BeautifulSoup
 from fake_useragent import UserAgent
 import random
 
+websites = ['https://www.booking.com/index.en-gb.html?aid=397594;label=gog235jc-1DCAEoggI46AdIM1gDaGyIAQGYAQm4ARfIAQzYAQPoAQGIAgGoAgO4AsfS5_AFwAIB;sid=9fd18cafc7785a385cdc8e953813840b;keep_landing=1&sb_price_type=total&',
+            'https://www.goibibo.com/gostays/',
+            'https://www.agoda.com/en-in/?cid=-145',
+            'https://www.expedia.co.in/?semcid=IN.B.GOOGLE.BT-c-EN.GENERIC&semdtl=a1764777706.b142991157729.r1.g1kwd-12670071.i1.d1251656725339.e1c.j11007799.k1.f11t1.n1.l1g.h1e.m1&gclid=Cj0KCQiAgebwBRDnARIsAE3eZjSKxlMFeDH-Xm7kil95T3J6ajQcWYrseZXDwFhNQ0Hf-7aybMjKli0aAre1EALw_wcB']
+
 ua = UserAgent() # From here we generate a random user agent
 proxies = [] # Will contain proxies [ip, port]
 
