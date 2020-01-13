@@ -1,9 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Sun Jan 12 14:22:49 2020
-
-@author: TripleR
-"""
 from re import findall
 from lxml import html
 from time import sleep
@@ -44,14 +38,16 @@ def parse(url):
                 sleep(10)
      
         """
-    SCROLL_PAUSE_TIME = 0.5
+    '''
+    SCROLL_PAUSE_TIME = 6
 
-# Get scroll height
+    # Get scroll height
+    
     last_height = response.execute_script("return document.body.scrollHeight")
 
     while True:
         # Scroll down to bottom
-        response.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+        response.execute_script("window.scrollTo(0, window.scrollY + "+str(last_height*0.6)+")")
 
         # Wait to load page
         sleep(SCROLL_PAUSE_TIME)
@@ -61,11 +57,17 @@ def parse(url):
         if new_height == last_height:
             break
         last_height = new_height
-    #response.execute_script("window.scrollTo(0, window.scrollY + 200)")
+    '''
+    current_scroll_position, new_height,speed= 0, 1, 8
+    while current_scroll_position <= new_height:
+        current_scroll_position += speed
+        response.execute_script("window.scrollTo(0, {});".format(current_scroll_position))
+        new_height = response.execute_script("return document.body.scrollHeight")
+    sleep(5)
     #response.execute_script("window.scrollTo(0, document.body.scrollHeight);")
     parser = html.fromstring(response.page_source,response.current_url)
     hotels = parser.xpath('//section[@class="hotel-wrap"]')
-    for hotel in hotels[:-1]: #Replace 5 with 1 to just get the cheapest hotel
+    for hotel in hotels[:]: #Replace 5 with 1 to just get the cheapest hotel
         hotelName = hotel.xpath('.//h3/a')
         hotelName = hotelName[0].text_content() if hotelName else None
         price = hotel.xpath('.//div[@class="price"]/a//ins')
