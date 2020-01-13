@@ -10,6 +10,7 @@ from time import sleep
 from selenium import webdriver
 from pprint import pprint
 from datetime import date
+from selenium.webdriver.common.keys import Keys
 #from xvfbwrapper import Xvfb
 
 
@@ -23,35 +24,45 @@ response.get('https://www.goibibo.com/hotels/')
 searchKeyElement = response.find_elements_by_xpath('//input[contains(@id,"gosuggest_inputL")]')
 checkInElement = response.find_element_by_xpath('//*[@id="Home"]/div[3]/div[1]/div/div[1]/div[3]/div/div[1]/div[1]/div/div/input')
 checkOutElement = response.find_elements_by_xpath('//*[@id="Home"]/div[3]/div[1]/div/div[1]/div[3]/div/div[1]/div[2]/div/div/input')
-submitButton = response.find_element_by_xpath('//*[@id="Home"]/div[3]/div[1]/div/div[1]/div[3]/div/div[3]/div/button')
-if searchKeyElement and checkInElement and checkOutElement:
+if checkInElement and checkOutElement:
     searchKeyElement[0].send_keys(searchKey)
+    sleep(5)
+    searchKeyElement[0].send_keys(Keys.TAB)
+    sleep(5)
     checkInElement.click()
-    dateWidget = response.find_element_by_xpath('//*[@id="Home"]/div[3]/div[1]/div/div[1]/div[3]/div/div[1]/div[1]/div[2]')
+    dateWidget1 = response.find_element_by_xpath('//*[@id="Home"]/div[3]/div[1]/div/div[1]/div[3]/div/div[1]/div[1]/div[2]')
     #previous widget
     #preWidget = response.find_elements_by_xpath('//*[@id="Home"]/div[3]/div[1]/div/div[1]/div[3]/div/div[1]/div[1]/div[2]/div[1]/span[1]')
-    nextWidget = dateWidget.find_elements_by_xpath('//*[@id="Home"]/div[3]/div[1]/div/div[1]/div[3]/div/div[1]/div[1]/div[2]/div[1]/span')
+    nextWidget = dateWidget1.find_elements_by_xpath('//*[@id="Home"]/div[3]/div[1]/div/div[1]/div[3]/div/div[1]/div[1]/div[2]/div[1]/span')
     checkInDateSplit = checkInDate.split('/')
     checkOutDateSplit = checkOutDate.split('/')
     todaySplit = today.split('-')
+    flag = 0
     for ran in range(int(todaySplit[1])-int(checkInDateSplit[1])):
         nextWidget[0].click()
     for x in range(1,6):
         for y in range(1,8):
-            day = dateWidget.find_element_by_xpath('//*[@id="Home"]/div[3]/div[1]/div/div[1]/div[3]/div/div[1]/div[1]/div[2]/div[2]/div[3]/div['+str(x)+']/div['+str(y)+']')
+            print('aa')
+            day = dateWidget1.find_element_by_xpath('//*[@id="Home"]/div[3]/div[1]/div/div[1]/div[3]/div/div[1]/div[1]/div[2]/div[2]/div[3]/div['+str(x)+']/div['+str(y)+']')
             intday = day.text
+            print(intday)
             if len(intday)>0:
                 intday = int(intday)
             if intday == int(checkInDateSplit[0]):
-                sleep(20)
+                sleep(5)
                 day.click()
                 print('day clicked')
+                flag = 1
                 break
+        if flag == 1:
+            break
     randomClick = response.find_elements_by_xpath('//h1')
     if randomClick:
         randomClick[0].click()
-    #submitButton.click()
-    sleep(15)
+    sleep(5)
+    submitButton = response.find_elements_by_xpath('//button[@type="submit"]')
+    submitButton[0].click()
+    sleep(5)
 """
         dropDownButton = response.find_elements_by_xpath('//fieldset[contains(@id,"dropdown")]')
         if dropDownButton:
