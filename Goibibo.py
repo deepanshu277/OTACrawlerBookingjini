@@ -42,16 +42,13 @@ if checkInElement and checkOutElement:
         nextWidget[0].click()
     for x in range(1,6):
         for y in range(1,8):
-            print('aa')
             day = dateWidget1.find_element_by_xpath('//*[@id="Home"]/div[3]/div[1]/div/div[1]/div[3]/div/div[1]/div[1]/div[2]/div[2]/div[3]/div['+str(x)+']/div['+str(y)+']')
             intday = day.text
-            print(intday)
             if len(intday)>0:
                 intday = int(intday)
             if intday == int(checkInDateSplit[0]):
                 sleep(5)
                 day.click()
-                print('day clicked')
                 flag = 1
                 break
         if flag == 1:
@@ -71,42 +68,25 @@ if checkInElement and checkOutElement:
             if priceLowtoHigh:
                 priceLowtoHigh[0].click()
                 sleep(10)
-        
+"""        
 
-    parser = html.fromstring(response.page_source,response.current_url)
-    hotels = parser.xpath('//section[@class="hotel-wrap"]')
-    for hotel in hotels[:5]: #Replace 5 with 1 to just get the cheapest hotel
-        hotelName = hotel.xpath('.//h3/a')
-        hotelName = hotelName[0].text_content() if hotelName else None
-        price = hotel.xpath('.//div[@class="price"]/a//ins')
+parser = html.fromstring(response.page_source,response.current_url)
+hotels = parser.xpath('//section[@class="newSrpCard"]')
+for hotel in hotels[:5]: #Replace 5 with 1 to just get the cheapest hotel
+    hotelName = hotel.xpath('//*[@id="srpContainer"]/div[2]/div[2]/div/div[2]/div/div[4]/div[1]/div/div/section[1]/div[1]/div[2]/div[1]/a/div/p')
+    hotelName = hotelName[0].text_content() if hotelName else None
+    price = hotel.xpath('//*[@id="srpContainer"]/div[2]/div[2]/div/div[2]/div/div[4]/div[1]/div/div/section[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div/span[2]/text()')
+    price = price[0].text_content().replace(",","").strip() if price else None
+    '''
+    if price==None:
+        price = hotel.xpath('.//div[@class="price"]/a')
         price = price[0].text_content().replace(",","").strip() if price else None
-        if price==None:
-            price = hotel.xpath('.//div[@class="price"]/a')
-            price = price[0].text_content().replace(",","").strip() if price else None
-        price = findall('([\d\.]+)',price) if price else None
-        price = price[0] if price else None
-        rating = hotel.xpath('.//div[@class="star-rating"]/span/@data-star-rating')
-        rating = rating[0] if rating else None
-        address = hotel.xpath('.//span[contains(@class,"locality")]')
-        address = "".join([x.text_content() for x in address]) if address else None
-        locality = hotel.xpath('.//span[contains(@class,"locality")]')
-        locality = locality[0].text_content().replace(",","").strip() if locality else None
-        region = hotel.xpath('.//span[contains(@class,"locality")]')
-        region = region[0].text_content().replace(",","").strip() if region else None
-        postalCode = hotel.xpath('.//span[contains(@class,"postal-code")]')
-        postalCode = postalCode[0].text_content().replace(",","").strip() if postalCode else None
-        countryName = hotel.xpath('.//span[contains(@class,"country-name")]')
-        countryName = countryName[0].text_content().replace(",","").strip() if countryName else None
-
-        item = {
+    
+    price = findall('([\d\.]+)',price) if price else None
+    price = price[0] if price else None
+    '''
+    item = {
                     "hotelName":hotelName,
-                    "price":price,
-                    "rating":rating,
-                    "address":address,
-                    "locality":locality,
-                    "region":region,
-                    "postalCode":postalCode,
-                    "countryName":countryName,
+                    "price":price
         }
-        pprint(item)
-"""
+    pprint(item)
