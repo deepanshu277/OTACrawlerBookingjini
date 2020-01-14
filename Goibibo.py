@@ -9,8 +9,8 @@ from selenium.webdriver.common.keys import Keys
 
 
 searchKey = "Bhubaneswar" # Change this to your city 
-checkInDate = '14/01/2020' #Format %d/%m/%Y
-checkOutDate = '15/01/2020' #Format %d/%m/%Y
+checkInDate = '15/01/2020' #Format %d/%m/%Y
+checkOutDate = '16/01/2020' #Format %d/%m/%Y
 today = str(date.today())
 months = {"January":1,"February":2,"March":3,"April":4,"May":5,"June":6,"July":7,"August":8,"September":9,"October":10,"November":11,"December":12}
 response = webdriver.Chrome(r'C:\Users\TripleR\Downloads\chromedriver_win32\chromedriver.exe')
@@ -63,14 +63,14 @@ while current_scroll_position <= new_height:
 sleep(5)
 
 parser = html.fromstring(response.page_source,response.current_url)
-hotels = parser.xpath('//section[@class="newSrpCard"]')
+hotels = parser.xpath('//div[@class="width100 fl"]')
 for hotel in hotels[:]:
-    hotelName = hotel.xpath('//*[@id="srpContainer"]/div[2]/div[2]/div/div[2]/div/div[4]/div[1]/div/div/section[1]/div[1]/div[2]/div[1]/a/div/p')
+    hotelName = hotel.xpath('./div[1]/div/a/div/p')
     hotelName = hotelName[0].text_content() if hotelName else None
-    price = hotel.xpath('//*[@id="srpContainer"]/div[2]/div[2]/div/div[2]/div/div[4]/div[1]/div/div/section[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div/span[2]/text()')
+    price = hotel.xpath('./div[1]/div[1]/div/div/div/span[1]/text()')
 
     if price==None:
-        price = hotel.xpath('.//div[@class="price"]/a')
+        price = hotel.xpath('./div[1]/div[1]/div/div/div/span/text()')
     
     #price = findall('([\d\.]+)',price) if price else None
     price = price[0] if price else None
