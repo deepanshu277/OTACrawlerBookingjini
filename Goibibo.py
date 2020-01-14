@@ -1,4 +1,4 @@
-#from re import findall
+from re import findall
 from lxml import html
 from time import sleep
 from selenium import webdriver
@@ -64,19 +64,17 @@ sleep(5)
 
 parser = html.fromstring(response.page_source,response.current_url)
 hotels = parser.xpath('//section[@class="newSrpCard"]')
-for hotel in hotels[:-1]: #Replace 5 with 1 to just get the cheapest hotel
+for hotel in hotels[:]:
     hotelName = hotel.xpath('//*[@id="srpContainer"]/div[2]/div[2]/div/div[2]/div/div[4]/div[1]/div/div/section[1]/div[1]/div[2]/div[1]/a/div/p')
     hotelName = hotelName[0].text_content() if hotelName else None
     price = hotel.xpath('//*[@id="srpContainer"]/div[2]/div[2]/div/div[2]/div/div[4]/div[1]/div/div/section[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div/span[2]/text()')
-    #price = price[0].text_content().replace(",","").strip() if price else None
-    '''
+
     if price==None:
         price = hotel.xpath('.//div[@class="price"]/a')
-        price = price[0].text_content().replace(",","").strip() if price else None
     
-    price = findall('([\d\.]+)',price) if price else None
+    #price = findall('([\d\.]+)',price) if price else None
     price = price[0] if price else None
-    '''
+    
     item = {
                     "hotelName":hotelName,
                     "price":price
