@@ -7,9 +7,9 @@ from selenium.webdriver.common.keys import Keys
 #from xvfbwrapper import Xvfb
 
 def parse(url):
-    searchKey = "Bhubaneswar" # Change this to your city 
-    checkInDate = '14/01/2020' #Format %d/%m/%Y
-    checkOutDate = '15/01/2020' #Format %d/%m/%Y
+    searchKey = "Haldia" # Change this to your city 
+    checkInDate = '15/01/2020' #Format %d/%m/%Y
+    checkOutDate = '16/01/2020' #Format %d/%m/%Y
     response = webdriver.Chrome(r'C:\Users\TripleR\Downloads\chromedriver_win32\chromedriver.exe')
     response.get(url)
     searchKeyElement = response.find_elements_by_xpath('//input[contains(@id,"destination")]')
@@ -18,6 +18,9 @@ def parse(url):
     submitButton = response.find_elements_by_xpath('//button[@type="submit"]')
     if searchKeyElement and checkInElement and checkOutElement:
         searchKeyElement[0].send_keys(searchKey)
+        sleep(5)
+        searchKeyElement[0].send_keys(Keys.TAB)
+        sleep(5)
         checkInElement[0].clear()
         checkInElement[0].send_keys(checkInDate)
         checkOutElement[0].clear()
@@ -28,36 +31,7 @@ def parse(url):
         sleep(3)
         submitButton[0].click()
         sleep(5)
-        """
-        dropDownButton = response.find_elements_by_xpath('//fieldset[contains(@id,"dropdown")]')
-        if dropDownButton:
-            dropDownButton[0].click()
-            priceLowtoHigh = response.find_elements_by_xpath('//li[contains(text(),"low to high")]')
-            if priceLowtoHigh:
-                priceLowtoHigh[0].click()
-                sleep(10)
-     
-        """
-    '''
-    SCROLL_PAUSE_TIME = 6
-
-    # Get scroll height
-    
-    last_height = response.execute_script("return document.body.scrollHeight")
-
-    while True:
-        # Scroll down to bottom
-        response.execute_script("window.scrollTo(0, window.scrollY + "+str(last_height*0.6)+")")
-
-        # Wait to load page
-        sleep(SCROLL_PAUSE_TIME)
-
-        # Calculate new scroll height and compare with last scroll height
-        new_height = response.execute_script("return document.body.scrollHeight")
-        if new_height == last_height:
-            break
-        last_height = new_height
-    '''
+        
     current_scroll_position, new_height,speed= 0, 1, 8
     while current_scroll_position <= new_height:
         current_scroll_position += speed
