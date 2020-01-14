@@ -1,10 +1,4 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Sun Jan 12 15:21:57 2020
-
-@author: TripleR
-"""
-from re import findall
+#from re import findall
 from lxml import html
 from time import sleep
 from selenium import webdriver
@@ -60,15 +54,13 @@ if checkInElement and checkOutElement:
     submitButton = response.find_elements_by_xpath('//button[@type="submit"]')
     submitButton[0].click()
     sleep(5)
-"""
-        dropDownButton = response.find_elements_by_xpath('//fieldset[contains(@id,"dropdown")]')
-        if dropDownButton:
-            dropDownButton[0].click()
-            priceLowtoHigh = response.find_elements_by_xpath('//li[contains(text(),"low to high")]')
-            if priceLowtoHigh:
-                priceLowtoHigh[0].click()
-                sleep(10)
-"""        
+
+current_scroll_position, new_height,speed= 0, 1, 8
+while current_scroll_position <= new_height:
+    current_scroll_position += speed
+    response.execute_script("window.scrollTo(0, {});".format(current_scroll_position))
+    new_height = response.execute_script("return document.body.scrollHeight")
+sleep(5)
 
 parser = html.fromstring(response.page_source,response.current_url)
 hotels = parser.xpath('//section[@class="newSrpCard"]')
