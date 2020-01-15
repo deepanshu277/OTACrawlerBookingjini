@@ -47,10 +47,11 @@ def parse(url):
         hotelName = hotelName[0].text_content() if hotelName else None
         price = hotel.xpath('.//div[2]/div[1]/div[1]/span/span[2]')
         price = price[0].text_content().replace(",","").strip() if price else None
+        '''
         if price==None:
             price = hotel.xpath('//*[@id="app"]/div[1]/div/div/div/div[1]/main/div/section[2]/ol/li[1]/div/div/div/div[2]/div[1]/div[1]/span/span[2]')
             price = price[0].text_content().replace(",","").strip() if price else None
-        
+        '''
         price = findall('([\d\.]+)',price) if price else None
         price = price[0] if price else None
         

@@ -1,14 +1,15 @@
-from re import findall
+#from re import findall
 from lxml import html
 from time import sleep
 from selenium import webdriver
-from pprint import pprint
+#from pprint import pprint
 from datetime import date
 from selenium.webdriver.common.keys import Keys
+import pandas as pd
 #from xvfbwrapper import Xvfb
 
 
-searchKey = "Bhubaneswar" # Change this to your city 
+searchKey = "Ghaziabad" # Change this to your city 
 checkInDate = '15/01/2020' #Format %d/%m/%Y
 checkOutDate = '16/01/2020' #Format %d/%m/%Y
 today = str(date.today())
@@ -54,29 +55,40 @@ if checkInElement and checkOutElement:
     submitButton = response.find_elements_by_xpath('//button[@type="submit"]')
     submitButton[0].click()
     sleep(5)
-
-current_scroll_position, new_height,speed= 0, 1, 8
+hotelNames = []
+prices = []
+current_scroll_position, new_height,speed= 0, 1, 25
 while current_scroll_position <= new_height:
     current_scroll_position += speed
     response.execute_script("window.scrollTo(0, {});".format(current_scroll_position))
     new_height = response.execute_script("return document.body.scrollHeight")
-sleep(5)
+    #sleep(1)
 
-parser = html.fromstring(response.page_source,response.current_url)
-hotels = parser.xpath('//div[@class="width100 fl"]')
-for hotel in hotels[:]:
-    hotelName = hotel.xpath('./div[1]/div/a/div/p')
-    hotelName = hotelName[0].text_content() if hotelName else None
-    price = hotel.xpath('./div[1]/div[1]/div/div/div/span[1]/text()')
+    parser = html.fromstring(response.page_source,response.current_url)
+    hotels = parser.xpath('//div[@class="col-md-8 col-sm-8 col-xs-12 padL10"]')
 
-    if price==None:
-        price = hotel.xpath('./div[1]/div[1]/div/div/div/span/text()')
+    a = 0
+    for hotel in hotels[:]:
+        hotelName = hotel.xpath('.//div[1]/a/div/p')
+        hotelName = hotelName[0].text_content() if hotelName else None
+        price = hotel.xpath('.//div[2]/div[1]/div[1]/div/span[2]/text()')
     
-    #price = findall('([\d\.]+)',price) if price else None
-    price = price[0] if price else None
-    
-    item = {
-                    "hotelName":hotelName,
-                    "price":price
-        }
-    pprint(item)
+        if price==None:
+            price = hotel.xpath('.//div[2]/div[1]/div[1]/div/span/text()')
+        
+        #price = findall('([\d\.]+)',price) if price else None
+        price = price[0] if price else None
+        
+        hotelNames.append(str(hotelName))
+        prices.append(str(price))
+        
+        #pprint(item)
+        a = a+1
+item = {
+                        "hotelName":hotelNames,
+                        "price":prices
+            }
+df = pd.DataFrame(item)
+df = pd.DataFrame.drop_duplicates(df)
+print(a)
+df.reset_index(drop = True, inplace = True) 
