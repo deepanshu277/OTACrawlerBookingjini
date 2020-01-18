@@ -22,8 +22,10 @@ for row in proxies_table.tbody.find_all('tr'):
     'port': row.find_all('td')[1].string
   })
 
+
 def random_proxy():
-  return random.randint(0, len(proxies) - 1)
+    return random.randint(0, len(proxies) - 1)
+
 
 # Choose a random proxy
 proxy_index = random_proxy()
