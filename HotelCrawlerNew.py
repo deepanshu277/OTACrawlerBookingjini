@@ -10,7 +10,7 @@ import pandas as pd
 
 ua = UserAgent() # From here we generate a random user agent
 proxies = [] # Will contain proxies [ip, port]
-otas = ['https://www.expedia.co.in','https://in.hotels.com']
+otas = ['https://www.expedia.co.in','https://in.hotels.com','https://www.goibibo.com/hotels/']
 '''
 Retrieve latest proxies
 '''
@@ -76,6 +76,11 @@ for url in otas:
                 if len(df) > 1:
                     df.to_csv('Hotelsdotcom.csv')
                     break
+            if temp == 2:
+                df = Goibibo.parse(url, proxy, driver, inputs)
+                if len(df) > 1:
+                    df.to_csv('goibibo.csv')
+                    break
         except: # If error, delete this proxy and find another one
             #del proxies[proxy_index]
             #print('Proxy ' + proxy['ip'] + ':' + proxy['port'] + ' deleted.')
@@ -86,4 +91,3 @@ for url in otas:
                 proxyGenerator()
             proxy = proxies[proxy_index]
     sleep(random.choice([1,2,3,4]))
-    
