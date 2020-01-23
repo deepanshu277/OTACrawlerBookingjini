@@ -29,7 +29,10 @@ def parse(url, proxy, driver, inputs):
         response = webdriver.Firefox(firefox_profile=profile, capabilities = firefox_capabilities, executable_path=r'C:\Users\TripleR\Downloads\geckodriver-v0.26.0-win64\geckodriver.exe')
     today = str(date.today())
     #months = {"January":1,"February":2,"March":3,"April":4,"May":5,"June":6,"July":7,"August":8,"September":9,"October":10,"November":11,"December":12}
-    response.get('https://www.goibibo.com/hotels/')
+    try:
+        response.get(url)
+    except:
+        response.close()
     searchKeyElement = response.find_elements_by_xpath('//input[contains(@id,"gosuggest_inputL")]')
     checkInElement = response.find_element_by_xpath('//*[@id="Home"]/div[3]/div[1]/div/div[1]/div[3]/div/div[1]/div[1]/div/div/input')
     checkOutElement = response.find_elements_by_xpath('//*[@id="Home"]/div[3]/div[1]/div/div[1]/div[3]/div/div[1]/div[2]/div/div/input')

@@ -6,25 +6,28 @@ from time import sleep
 import expedia
 import Goibibo
 import Hotelsdotcom
+import pandas as pd
 
 ua = UserAgent() # From here we generate a random user agent
 proxies = [] # Will contain proxies [ip, port]
-otas = ['https://www.expedia.co.in','https://www.goibibo.com/hotels/','https://www.hotels.com']
+otas = ['https://www.expedia.co.in','https://in.hotels.com']
 '''
 Retrieve latest proxies
 '''
-proxies_req = Request('https://www.sslproxies.org/')
-proxies_req.add_header('User-Agent', ua.random)
-proxies_doc = urlopen(proxies_req).read().decode('utf8')
-
-soup = BeautifulSoup(proxies_doc, 'html.parser')
-proxies_table = soup.find(id='proxylisttable')
-
-for row in proxies_table.tbody.find_all('tr'):
-    proxies.append({
-    'ip':   row.find_all('td')[0].string,
-    'port': row.find_all('td')[1].string
-  })
+def proxyGenerator():
+    proxies_req = Request('https://www.sslproxies.org/')
+    proxies_req.add_header('User-Agent', ua.random)
+    proxies_doc = urlopen(proxies_req).read().decode('utf8')
+    
+    soup = BeautifulSoup(proxies_doc, 'html.parser')
+    proxies_table = soup.find(id='proxylisttable')
+    
+    for row in proxies_table.tbody.find_all('tr'):
+        proxies.append({
+        'ip':   row.find_all('td')[0].string,
+        'port': row.find_all('td')[1].string
+      })
+'''
 errorProxies = []
 for proxy in proxies:
     req = Request('http://icanhazip.com')
@@ -37,6 +40,8 @@ for proxy in proxies:
         print('Proxy ' + proxy['ip'] + ':' + proxy['port'] + ' deleted.')
 
 proxies = [x for x in proxies if x not in errorProxies]
+'''
+proxyGenerator()
 def random_proxy():
     return random.randint(0, len(proxies) - 1)
 '''
@@ -49,11 +54,12 @@ inputs = [searchKey, checkInDate, checkOutDate]
 '''
 Crawling through the wepages in otas
 '''
+df = 0
 for url in otas:
     proxy_index = random_proxy()
     proxy = proxies[proxy_index]
-    driver = random.choice([1, 2])
     while True: 
+        driver = random.choice([1, 2])
         req = Request('http://icanhazip.com')
         req.set_proxy(proxy['ip'] + ':' + proxy['port'], 'http')
         try:
@@ -62,20 +68,22 @@ for url in otas:
             temp = otas.index(url)
             if temp == 0:
                 df = expedia.parse(url, proxy, driver, inputs)
-                df.to_csv('expedia.csv')
-                break
+                if len(df) > 1:
+                    df.to_csv('expedia.csv')
+                    break
             if temp == 1:
-                df = Goibibo.parse(url, proxy, driver, inputs)
-                df.to_csv('Goibibo.csv')
-                break
-            if temp == 2:
                 df = Hotelsdotcom.parse(url, proxy, driver, inputs)
-                df.to_csv('Hotelsdotcom.csv')
-                break
+                if len(df) > 1:
+                    df.to_csv('Hotelsdotcom.csv')
+                    break
         except: # If error, delete this proxy and find another one
             #del proxies[proxy_index]
             #print('Proxy ' + proxy['ip'] + ':' + proxy['port'] + ' deleted.')
-            proxy_index = random_proxy()
+            del proxies[proxy_index]
+            try:
+                proxy_index = random_proxy()
+            except:
+                proxyGenerator()
             proxy = proxies[proxy_index]
     sleep(random.choice([1,2,3,4]))
     
