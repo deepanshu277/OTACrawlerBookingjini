@@ -54,7 +54,7 @@ inputs = [searchKey, checkInDate, checkOutDate]
 '''
 Crawling through the wepages in otas
 '''
-df = 0
+df = []
 for url in otas:
     proxy_index = random_proxy()
     proxy = proxies[proxy_index]
@@ -70,16 +70,19 @@ for url in otas:
                 df = expedia.parse(url, proxy, driver, inputs)
                 if len(df) > 1:
                     df.to_csv('expedia.csv')
+                    df = []
                     break
             if temp == 1:
                 df = Hotelsdotcom.parse(url, proxy, driver, inputs)
                 if len(df) > 1:
                     df.to_csv('Hotelsdotcom.csv')
+                    df = []
                     break
             if temp == 2:
                 df = Goibibo.parse(url, proxy, driver, inputs)
                 if len(df) > 1:
                     df.to_csv('goibibo.csv')
+                    df = []
                     break
         except: # If error, delete this proxy and find another one
             #del proxies[proxy_index]
