@@ -19,15 +19,15 @@ def check_ping(hostname):
     else:
         return False
 '''
-def parse(url, proxy, driver, inputs):
+inputs = ['Haldia','02/02/2020','03/02/2020']
+url = 'https://www.expedia.co.in/'
+def parse(url, inputs, driver = 1):
     searchKey = inputs[0] # Change this to your city 
     checkInDate = inputs[1] #Format %d/%m/%Y
     checkOutDate = inputs[2] #Format %d/%m/%Y
+
     if driver == 1:
-        PROXY = proxy['ip'] + ':' + proxy['port'] # IP:PORT 
-        chrome_options = webdriver.ChromeOptions()
-        chrome_options.add_argument('--proxy-server=%s' % PROXY)
-        response = webdriver.Chrome(executable_path = r'C:\Users\TripleR\Downloads\chromedriver_win32\chromedriver.exe', chrome_options=chrome_options)
+        response = webdriver.Chrome(executable_path = r'C:\Users\TripleR\Downloads\chromedriver_win32\chromedriver.exe')
     if driver == 2:
         firefox_capabilities = DesiredCapabilities.FIREFOX
         firefox_capabilities['marionette'] = True
@@ -37,6 +37,8 @@ def parse(url, proxy, driver, inputs):
         profile.set_preference("network.proxy.http", proxy['ip'])
         profile.set_preference("network.proxy.http_port", proxy['port'])
         response = webdriver.Firefox(firefox_profile=profile, capabilities = firefox_capabilities, executable_path=r'C:\Users\TripleR\Downloads\geckodriver-v0.26.0-win64\geckodriver.exe')
+   
+   
     try:
         response.get(url)
         searchKeyElement = response.find_elements_by_xpath('//*[@id="hotel-destination-hp-hotel"]')
@@ -105,3 +107,4 @@ def parse(url, proxy, driver, inputs):
         return df
     except:
         response.close()
+df1 = parse(url, inputs)
