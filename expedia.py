@@ -63,7 +63,6 @@ def parse(url, proxy, driver, inputs):
         prices = []
         current_scroll_position, new_height,speed= 0, 1, 8
         while True:
-            
             while current_scroll_position <= new_height:
                 current_scroll_position += speed
                 response.execute_script("window.scrollTo(0, {});".format(current_scroll_position))
@@ -74,7 +73,7 @@ def parse(url, proxy, driver, inputs):
                 showMore[0].click()
             else:
                 break
-            sleep(7)
+            sleep(4)
             new_height = response.execute_script("return document.body.scrollHeight")
         #response.execute_script("window.scrollTo(0, document.body.scrollHeight);")
         parser = html.fromstring(response.page_source,response.current_url)
