@@ -1,17 +1,191 @@
 ,hotelName,price
-0,OYO 60019 Hotel Classic Inn,1950
-1,HOTEL LANDMARCPLAZA,2500
-2,Ganga Kutir,9766
-3,SPOT ON 43671 Hotel Mahuya Inn,1741
-4,OYO 62127 Ritz Rivera,1884
-5,The Golden Retreat,None
-6,Palette - The Golden Retreat,None
-7,OYO 22269 Hotel Landmark Plaza,None
-8,OYO 49758 Hotel Royal Harbour,None
-9,The Ffort Raichak,None
-10,OYO 28336 Hotel Girish,None
-11,OYO 28439 Skylark Hotel,None
-12,SPOT ON 39436 Hotel Chalantika,None
-13,Hotel Sea Bird International ,None
-14,Rajhans Hotel and Resort,None
-15,OYO 25006 Hotel Tr Palace,None
+0,Hotel Park Resort,1699
+1,OYO 9010 Hotel Railview,2606
+2,VITS Bhubaneshwar,3999
+3,Hotel Eden Roc,1800
+4,OYO 9855 Hotel Royal Suites,4105
+5,Hotel Swosti Premium,3599
+6,Pal Heights,5600
+7,Hotel Golden Orchid,2149
+8,krtatithya,1549
+9,FabHotel Pentagon,2086
+10,CS Imperial Stay,1299
+11,Hotel Kumud Plaza,1800
+12,Hotel Tara Residency,2280
+13,OYO 16631 Greenstar Inn,3203
+14,Collection O 29524 The Urban Park,5082
+15,Hotel Durene,2999
+16,OYO 15380 Sai Swastik,1650
+17,Treebo Aatithya,1917
+18,Capital O 28034 Triple Tree Hotels & Resorts,5209
+19,OYO 14988 Regal Stays,2933
+20,Collection O 30111 Hotel Miland Palace,4906
+21,Collection O 35655 Hotel Kalinga,5280
+22,OYO 18686 Aradhya Residency,1495
+23,OYO 5417 Hotel Venus Heritage,1554
+24,Hotel Sambit Royale,2000
+25,OYO 13527 Usha Residdency,3890
+26,Hotel Nirmala Residency,999
+27,OYO 3393 Midway Inn,1879
+28,OYO 4526 Jaydev Vihar,1780
+29,OYO 16407 Hotel Dream Castle,4643
+30,OYO 19602 Omm Residency,2601
+31,OYO 24789 Sidharth International,3132
+32,OYO 19144 Hotel Rainbow,3155
+33,SR Corporate Homes,1400
+34,OYO 37181 Stay Ekante,1297
+35,OYO 23382 Sai Gourav Residence,3476
+36,OYO 9009 near Railway Station,10000
+37,OYO 4110 near Apollo Hospital,2098
+38,The Extended Stay,900
+39,OYO 10511 Nayapalli,2172
+40,The Extended Stay 2,999
+41,OYO 60003 Hotel Santosh,1269
+42,Hotel Arya Palace,2300
+43,OYO 17194 Ma Sum Palace,1297
+44,Collection O 19529 Hotel Bhinna Sakala,4855
+45,OYO 8741 Shree Jagannath Palace,2010
+46,Hotel Sandy's Tower,7999
+47,OYO 22630 The Dream Palace,2725
+48,OYO 4108 near Kalinga Hospital,1563
+49,The Suncity,2499
+50,Nilay Residency,2100
+51,OYO 18658 Hotel Royal Green,2573
+52,Hotel Pushpak,2600
+53,OYO 14041 Evolve Residency,1029
+54,Hotel Suryansh,4500
+55,OYO 43835 Imperial Stays,1219
+56,OYO 14489 Hotel Aryan,2886
+57,OYO 3803 Hotel Lal Quila,2840
+58,The Extended Stay 1,900
+59,OYO 13859 Soveet Residency,1240
+60,OYO 22510 Ma Classic Inn,3944
+61,OYO 7674 Hotel Stellar,3856
+62,OYO 17435 The Pinnacle Home Stay,5881
+63,OYO 43512 Bijaya Palace,1753
+64,FabExpress 7 Sandz,1370
+65,OYO 48754 Arati Homes,1191
+66,OYO 10800 Ma Homestay,1672
+67,OYO 4877 Chandrasekharpur,1341
+68,OYO 10493 near Patia,1597
+69,OYO 11408 Hotel Sai Jagannath,1834
+70,Hotel Royal Guest House,1600
+71,OYO 26670 The Ranch,2550
+72,OYO 15441 Apollo Paradise Guest House,2860
+73,OYO 11946 Greenland Inn,1617
+74,OYO 46929 Royal Blues,1195
+75,OYO 15084 Lotus Residency,2682
+76,OYO 16363 Advik Cottage,2847
+77,OYO 17276 The Maple Tree Hotels,2669
+78,OYO 14712 The New Garden Inn,2682
+79,OYO 13924 Shree Gopal Residency,2886
+80,OYO 22547 Avigna Residency,2618
+81,Capital O 28420 The Kanchan Plaza,3608
+82,OYO 13624 Kapoors Plaza Guest House,2741
+83,OYO 23598 Home Elite Stay Nandankanan Park,1787
+84,OYO 24739 Ap Guest House,2522
+85,OYO 16722 The Countryside Resort,2618
+86,Hotel Sambit Palace,1800
+87,Saraswati Retreat,2229
+88,OYO 2279 Greenwood Galaxy,1533
+89,OYO 9564 near KIIT University,3035
+90,Hotel Landmark,2280
+91,OYO 28685 Hotel Villaggio,2606
+92,OYO 9964 Hotel Shine,4224
+93,OYO 11345 Hotel White House Inn,1453
+94,Capital O 37885 Ekamra Inn,None
+95,OYO 10271 Hotel Guest INN,None
+96,OYO 27826 Home Graceful Stay Near Airport,None
+97,Nest Guest House,None
+98,OYO 2338 Hotel Pelican,None
+99,Hotel Kalinga Ashok,None
+100,OYO 5719 Hotel Jannat Palace,None
+101,FORTUNE PARK SISHMO BHUBANESWAR- Member ITC Hotel Group,None
+102,OYO 26853 New Central,None
+103,OYO 11346 Hotel Tazz Odisha,None
+104,OYO 16821 Hotel Senapati Palace,None
+105,OYO 16863 Ashiyana Inn,None
+106,Ashiyana Inn,None
+107,Hotel Rajendra Residency,None
+108,OYO 24845 Hotel Bhaba Lakshmi,None
+109,FabHotel Pentagon Airport,None
+110,Hotel Excellency,None
+111,Hotel Vintage Villa,None
+112,Hotel Grand central,None
+113,Hotel Swosti Grand,None
+114,OYO Flagship 201 Khandagiri Chowk,None
+115,OYO 4065 Hotel Richi,None
+116,"Mango Hotels Prangan,Bhubaneshwar",None
+117,OYO 16553 Flagship Bhubaneshwar Railway Station,None
+118,Hotel keshari,None
+119,OYO 16159 Hotel Keshari,None
+120,OYO 8414 Galaxy Inn,None
+121,OYO 4209 Maurya Inn,None
+122,Sapphire Plaza,None
+123,OYO 11659 Kalinga Regency,None
+124,OYO 15568 Khandagiri Guest House,None
+125,OYO 5716 Hotel Krishna,None
+126,The Hhi Bhubaneswar,None
+127,Treebo Trend Hotel OASIS,None
+128,OYO 16535 Chilika Residency,None
+129,OYO 10510 Nayapalli,None
+130,OYO Flagship 172 Forum Mall,None
+131,The Crown,None
+132,Ginger Bhubaneshwar,None
+133,OYO 3553 Nayapalli,None
+134,OYO Flagship 12272 Bari International Nayapalli,None
+135,OYO 1359 Hotel Best Inn,None
+136,OYO 4230 Hotel Richi Regency 1,None
+137,OYO 11631 Star Inn,None
+138,OYO 29205 Bhubaneswar Pride,None
+139,Empires Hotel Bhubaneswar,None
+140,OYO 8740 Nayapalli,None
+141,MAYFAIR Convention,None
+142,OYO 30710 Maa Banadurga Homestay,None
+143,Mayfair Lagoon,None
+144,OYO 12122 Maa Bhagabati Guest House,None
+145,OYO 1651 Hotel Seetal,None
+146,"Trident, Bhubaneswar",None
+147,OYO 9547 Hotel Atmaram Lodging,None
+148,OYO Flagship 22336 Mancheswar Industrial Estate,None
+149,OYO 24971 Hotel South City,None
+150,FabHotel Paradise Convention,None
+151,OYO 3286 near Kalinga Hospital,None
+152,Hotel Suryansh Jajpur,None
+153,OYO 9246 Paradise Inn,None
+154,OYO 12005 Priyanka Residency,None
+155,OYO 10512 The Extended Stay 2,None
+156,OYO 11343 Hotel Sai International,None
+157,OYO 18417 Sri Hari Guest House,None
+158,OYO 4389 Sai Guest House,None
+159,Treebo Trend King's Court,None
+160,OYO 8346 LazyStays,None
+161,Collection O 30111 Near Chandrasekharpur,None
+162,Capital O 29241 Hotel Middleton,None
+163,OYO 3869 Hotel Daaven,None
+164,OYO 11760 near Infocity,None
+165,OYO 9548 Green Villa Guest House,None
+166,OYO 13092 Comfort Inn,None
+167,OYO 3518 The Room,None
+168,OYO 2770 Hotel 7Saat,None
+169,OYO 10982 Hotel Sai Prabha,None
+170,Fabhotel Sai Prabha,None
+171,OYO 7583 Hotel Suraj Palace 1,None
+172,Hotel Suraj Palace,None
+173,OYO 18826 Hotel Emerald,None
+174,OYO 23251 Prime Residency,None
+175,OYO 6680 Hotel Galaxy International,None
+176,OYO 8222 near KIIT University,None
+177,OYO 5703 near KIIT University,None
+178,FabExpress Royal Guest House,None
+179,OYO 4720 near KIIT University,None
+180,OYO 8858 The Corpz Inn,None
+181,OYO 9245 near KIIT University,None
+182,OYO 8195 Patia,None
+183,Capital O 30565 Pabitra Royal Regency,None
+184,Pabitra Royal Regency,None
+185,HOTEL PAL HEIGHTS MANTRA,None
+186,OYO 15474 The Village Inn,None
+187,OYO 12756 Galaxy Homes,None
+188,OYO 9842 Hotel Shibani & Suhani,None
+189,OYO 18681 Amrapalli Resorts,None

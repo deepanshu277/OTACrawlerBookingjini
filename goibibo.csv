@@ -1,6 +1,359 @@
 ,hotelName,price
-0,Hotel East Coast,997
-1,The Golden Retreat,3051
-2,OYO 60019 Hotel Classic Inn,1232
-3,Landmarc Plaza,2546
-4,Jalpath,1657
+0,The Suncity,1448
+1,Hotel Pushpak,2353
+2,Hotel Vintage Villa,1611
+3,Hotel Sambit Royale,917
+4,Ashiyana Inn,715
+5,GOLDEN ORCHID,1606
+6,Ginger Hotel Bhubaneshwar,None
+7,Hotel Nirmal Inn,636
+8,Annapurna Inn,1066
+9,Shivangi international,421
+10,Hotel Eden Roc,1537
+11,SAPPHIRE PLAZA,2134
+12,Sambit Palace Bhubaneswar,782
+13,OYO 13924 Shree Gopal Residency,1028
+14,Mango Hotels Prangan,4733
+15,THE TARA RESIDENCY,1593
+16,White Residency,436
+17,Hotel Grand Central,2418
+18,JSB Trident Galaxy,385
+19,A2 White Rose,832
+20,Hotel Durene,1669
+21,Hotel La Franklin,2470
+22,Pal Heights,4463
+23,OYO 11408 Hotel Sai Jagannath,1028
+24,Pal Heights Mantra,4813
+25,Capital O 28034 Triple Tree Hotels & Resorts,1882
+26,Hotel Urmee,1667
+27,Tranquil Hospitality,840
+28,Hotel Arvind Inn,1610
+29,OYO 10271 Hotel Guest INN,987
+30,Second home,600
+31,JSB Maytri Inn,508
+32,Hotel Nirmala Residency,861
+33,OYO 18845 Vishal Guest House,930
+34,BJ's By the Way Tandoor Delight,None
+35,OYO 3803 Hotel Lal Quila,1828
+36,VITS Bhubaneswar,3999
+37,Park Resort,904
+38,OYO 28275 Archie Oasis,1323
+39,Hotel Lingaraj Bhubaneswar,1584
+40,HOTEL 7SAAT,4050
+41,OYO 9010 Hotel Railview,1577
+42,Hotel Royal Inn,1136
+43,Laughing Buddha Homestay,448
+44,Collection O 30109 Mancheswar Industrial Estate,1599
+45,Saikrishna Guest House,450
+46,OYO 15504 Maa Banadurga Guest House,1125
+47,SWAGAT INN,885
+48,CASA Residency,1251
+49,OYO 16363 Advik Cottage,903
+50,Kumud Plaza,1155
+51,OYO 14505 Regal Stays,923
+52,Hotel Arya Palace,1936
+53,Saraswati Retreat,1245
+54,Collection O 29524 The Urban Park,1723
+55,Hotel landmark,1947
+56,SOUTHCITY,699
+57,OYO 9246 Paradise Inn,985
+58,Ratna Resort,722
+59,Hotel Sidharth,3076
+60,OYO 60719 Swastik Residency,927
+61,Hotel Smile Inn,887
+62,OYO 47292 Cosy Stay in Kalinga Nagar,722
+63,Hotel Sandy's Tower,6345
+64,Hotel The Sutrupti,917
+65,OYO 33400 OMM sai Plaza,1404
+66,HOTEL RAJDHANI,1072
+67,OYO 14489 Hotel Aryan,1028
+68,Radhika Resort,848
+69,Moon Light Guest House 3,None
+70,Hotel Keshari,1030
+71,Hotel Suryansh,4028
+72,OYO 15441 Apollo Paradise Guest House,1028
+73,The Royale Midtown,3107
+74,Hotel Kalinga Ashok,4064
+75,OYO 1359 Hotel Best Inn,1215
+76,Hotel Suraj Palace,4328
+77,S.R.S. GUEST HOUSE,764
+78,OYO 17276 The Maple Tree Hotels,906
+79,Venus Nxt,1612
+80,ROYAL HERITAGE HOTEL,704
+81,WeKare,730
+82,OYO 28685 Hotel villaggio,938
+83,SITEL GUEST HOUSE,1701
+84,Hotel Priya,None
+85,OYO 24789 Sidharth Residency,1125
+86,Hotel Atmaram,979
+87,Nest Guest House,802
+88,OYO 22547 Avigna Residency,943
+89,Saransh Guest House,933
+90,Maharaja Guest House,1452
+91,OYO 17435 The pinnacle home stay,2494
+92,PATRA GUEST HOUSE,2012
+93,Hotel Annapurna,2512
+94,OYO 35681 Shree Marg Guest House,890
+95,Raydission Inn,1328
+96,B & B A bed and breakfast,1333
+97,OYO 49258 Ms Deluxe,936
+98,Venus inn,None
+99,Shree Gopal Residency,802
+100,OYO 44255 Home Ramakrushna Choudhary,770
+101,Dakhinakali Residency,504
+102,OYO 15084 Sai Lotus Residency,948
+103,The Retreat,1343
+104,OYO 16722 The Countryside Resort,906
+105,Hotel Basera,1057
+106,B10 International,2498
+107,OYO 22630 The Dream Palace,936
+108,AIIMS NAGAR REST HOUSE,599
+109,OYO 8741 Shree Jagannath Palace,1242
+110,HOTEL GOKUL PLAZA,1537
+111,Brothers Residency,495
+112,Collection O 35655 Hotel Kalinga Bapuji Nagar,1798
+113,Hotel Ashirbad Mandap,802
+114,The Lavenders Blue Home Stay,4116
+115,OYO 8346 LazyStays,1028
+116,ODISHA HOMESTAY,1527
+117,Ghungur,1528
+118,OYO 19602 Omm Residency,1261
+119,Hotel Tazz Odisha,1242
+120,Kalpana Residency,600
+121,OYO 24317 Aditya Guest House 3,923
+122,SPOGEDEN,626
+123,Khushi My 2nd Home,1286
+124,OYO 4720 Ma Guest House 2,899
+125,Biraj Hotels,1325
+126,JSB Rooms,2510
+127,OYO 48754 Arati Homes,809
+128,Anjali Palace,807
+129,OYO 14041 Evolve Residency,943
+130,Hotel Deepali International,1031
+131,Paradise Guest House,802
+132,OYO 39500 Artistic Stay CET,904
+133,Shree Vineeth's,1905
+134,Bhubaneswar Homestay,2087
+135,OYO 18355 Hotel Moonlight,1081
+136,Moon Light Guest House 4,665
+137,OYO 39414 Elegant Stay KIIT,1192
+138,Supriya Guest House (Double Bed Non AC Room),2386
+139,Silan Residency,785
+140,OYO 3553 Nayapalli,1140
+141,HOTEL SAI AMRIT RESIDENCY,1886
+142,Krishna Lodge,966
+143,OYO 16631 Greenstar Inn,1239
+144,Airy Classy Retreat 2Bhk,2730
+145,Khandagiri Stay,742
+146,OYO 33448 Affinity Home,923
+147,Moon Light Guest House 5,578
+148,Hotel Sunrise,1288
+149,OYO 49194 Hotel Sungreen,1594
+150,Mayurika Guest House 2,926
+151,Sunrise Guest House-Bhubaneswar (Non AC Double Bed),2312
+152,Collection O 30111 Hotel Miland Palace Cuttak Rd,1657
+153,MADHUR HOMESTAY,436
+154,ROYAL Cottage,486
+155,OYO 22510 Ma Classic Inn,1405
+156,Hotel Solan Inn,1609
+157,Pyramid Guest House,486
+158,OYO 14173 MS Villa,927
+159,Excel Home Guest House,759
+160,JSB Vipul Garden,1176
+161,OYO 26622 MS Plaza,1145
+162,Hotel Upasana,763
+163,Pipul Bandhan Inn,967
+164,Maitri Guest House,593
+165,Hotel Arya Mahal,1443
+166,OYO 48051 Vibrant Stay Nandan Vihar,919
+167,Capital Guest House,725
+168,Hotel City Palace,4174
+169,Capital O 28420 The Kanchan Plaza,1562
+170,The Acco,1504
+171,SR CORPORATE GUEST HOUSE,1955
+172,OYO 43609 MS Heritage,962
+173,Royal House,617
+174,OYO 9964 Hotel Shine,1321
+175,CS Imperial Stay,687
+176,Pink Villa Guest House,1560
+177,OYO 19144 Hotel Rainbow,1134
+178,Maa Bana Durga Home Stay,4174
+179,Hotel Swagat,1213
+180,OYO 17194 Ma Sum Palace,854
+181,Capital O 46993 Hotel Suryansh,1164
+182,OYO 10493 MS Residency,1006
+183,OYO 14470 Kalinga Guest House,823
+184,OYO 3393 Midway Inn,1175
+185,OYO 11631 Sai Sagar Residency,1409
+186,OYO 24077 Arnapurna Home Stay,1370
+187,OYO 27602 Hotel Green Space,875
+188,OYO 47960 Spacious Stay Near ITER College,807
+189,OYO 11946 Greenland Inn,1331
+190,OYO 5417 Hotel Venus Heritage,957
+191,OYO 14673 Ma Home Residency,1146
+192,OYO 4108 near Kalinga Hospital,963
+193,OYO 39400 Artistic Stay Khandagiri Caves,933
+194,OYO 10511 Saransh Guest House,1307
+195,OYO 14665 Daydream,913
+196,Capital O 30565 Pabitra Royal Regency,2413
+197,Capital O 48989 MR House,1500
+198,OYO 46648 Avisi Residency,862
+199,Capital O 43512 Bijaya Palace,1221
+200,OYO 48557 DT Delights,843
+201,OYO 44227 Hotel Sri Govinda,765
+202,OYO 38021 Hotel Corporate Inn,1332
+203,OYO 48449 Khandai Palace,646
+204,OYO 27030 Hotel Blue Bell,957
+205,OYO 14712 The New Garden Inn,948
+206,OYO 29279 Sai Swarupa Residency,948
+207,Collection O 19529 Hotel Bhinna Sakala,1638
+208,OYO 37181 Stay Ekante,889
+209,OYO 45367 Delightful Stay Near ITER College,970
+210,OYO 4877 Moon Light Guest House,814
+211,"OYO 62259 Elegant Stay, Bhubaneshwar",970
+212,OYO 66350 Hotel Space Setter,913
+213,OYO 45719 Spacious Stay Shree Mansion,1115
+214,OYO 16407 Hotel Dream Castle,1522
+215,OYO 36101 The Ambience,1831
+216,OYO 13527 Usha Residdency,1278
+217,OYO 47605 Satya Homes,772
+218,OYO 13624 Kapoors Plaza Guest House,970
+219,OYO 24739 Ap Guest House,905
+220,OYO 23598 Elite Stay Near Nandankanan Zoo,967
+221,OYO 36828 Krisha palace,1118
+222,OYO 15380 Sai Swastik,1563
+223,OYO 60276 Pleasant Stay Near Lingaraj Temple,1162
+224,OYO 29602 Shine Inn,872
+225,OYO 47504 Vibrant Stay Near MIET College,815
+226,OYO 14727 Prasanta Residency,904
+227,OYO 40638 HOTEL TURMERIC LEAF,1164
+228,OYO 62324 Elegant Stay in Bhubaneshwar,1030
+229,OYO 2279 Greenwood Galaxy,933
+230,OYO Home 48075 Near CRPF Square,919
+231,OYO Home 42361 in Bhubaneshwar,894
+232,OYO 39521 Nandan Residency,1283
+233,OYO 22624 Bijaya Homes,936
+234,OYO 46005 Sai Darpan Residency,1823
+235,OYO 42373 Serene Stay,1012
+236,OYO 24110 Pink Villa Guest House,1619
+237,OYO 18658 Hotel Royal Green,925
+238,OYO 30181 Silver Key,1181
+239,OYO 36704 Hotel Madison,842
+240,OYO 45958 New Castle Inn,1181
+241,OYO 49250 Avigna Residency 2,1017
+242,OYO 61260 Comfortable Stay Nandan Vihar,1427
+243,OYO Home 46584 Near Sum Hospital,962
+244,OYO 46929 Royal Blues,812
+245,OYO 10800 Ma Homestay,985
+246,OYO 19323 Shiv Sai Guest House,1107
+247,OYO 61466 Asdev Premium,838
+248,OYO 40628 Sambit NX,1329
+249,OYO 42997 Cozy Stay,859
+250,OYO 44179 Pleasant Stay Near Airport,1186
+251,Collection O 50273 Old Town,1028
+252,OYO 37941 Koraput Bhawan Saver,874
+253,OYO 61919 Piyush Residency,903
+254,OYO 49157 Hotel Sai Heritage,821
+255,OYO 49802 Comfortable Stay Near Lingaraj Temple,1162
+256,OYO 43422 Ma Forest Park Inn,933
+257,OYO 65238 Hotel Crystal Stay,1957
+258,OYO 49844 Hotel Chancellor Grand,1489
+259,"OYO 47446 Vibrant Stay, Bhubaneshwar",944
+260,OYO 45662 Elegant Stay,1143
+261,OYO 35566 Maa Tarini Homestay,1101
+262,OYO Home 65443 Luxury,834
+263,OYO 29261 Sai Arya Residency,896
+264,Capital O 62001 Chetan Inn,1224
+265,OYO 3019 Hotel Lingaraj,1197
+266,OYO 36578 Elegant in Khandagiri,1046
+267,OYO 24567 Spacious Stay Near Khandagiri Hills,1056
+268,OYO 60003 Hotel Santosh,886
+269,OYO 49987 Exotic Stays,959
+270,OYO Home 67584 Vibrant Orchid Villa Opp Sum Hospital,834
+271,OYO 30192 Designer Stay Near Airport,1192
+272,OYO 43835 Imperial Stays,840
+273,OYO 62393 Home PC Mishra,1047
+274,OYO 22882 Elegant Stay Near AIIMS,1297
+275,OYO 67718 Hotel Livin,930
+276,"OYO 28826 Exotic Stay, Bhubaneshwar",1192
+277,OYO Home 39662 Luxury Stay,913
+278,OYO Home 64511 Bright Stay Near KIIT,1448
+279,OYO 30660 Elegant 1BHK Bhubaneswar Station,1427
+280,OYO 29837 Luxurious Stay Near KIIT,1099
+281,OYO 36504 Breezy Stay Near ITER,1049
+282,"OYO 42364 Elegant Abode, Bhubaneshwar",804
+283,OYO 61052 Hotel Magnum Deluxe,1500
+284,OYO 42365 Vibrant Stay,1047
+285,OYO Home 49810 Elegant Stay,1192
+286,OYO 67672 Devi Residency,884
+287,OYO 60994 The Venerate,933
+288,OYO 45483 Balaji Bhavan Guest House,854
+289,OYO 30104 Artistic Stay Near Barmunda Bus Stand,1168
+290,OYO 60303 Cosy Stay Kalinga Vihar,1114
+291,OYO 63833 Morya Classic,789
+292,OYO 30200 Spacious Studio Near CET College,1068
+293,OYO Home 48080 Comfortable Stay Kalinga Nagar,957
+294,OYO 47115 Lumbini Imperial,807
+295,OYO 62967 Panda Residency,955
+296,Capital O 65818 107 Not Out,1196
+297,OYO 64161 Home Hotel Daaven,1057
+298,OYO 44026 Samrudhi Residency,862
+299,SilverKey Executive Stays 60474 Anjali International Kalinga Nagar,1266
+300,OYO 29418 Elegant Stay ITER College,1063
+301,OYO 35726 Contemporary Stay,1168
+302,OYO 66550 Home Subhankar Mohapatra,820
+303,OYO 22970 Vibrant 2BHK Near Khandagiri,2287
+304,OYO Home 47844 near ITER College,1103
+305,SilverKey Executive Stays 46859 Ranjan Khandagiri,1230
+306,OYO 63138 Smile Guest House,933
+307,OYO 61796 Shanti Bhavan,789
+308,OYO 68832 S&h Residency,1035
+309,OYO 67612 Sanvi Residency,945
+310,OYO 43627 Hotel Madeline,942
+311,OYO Home 60277 Comfortable Stay Near Ekamra Hall,1162
+312,OYO 65491 Hill Town,975
+313,OYO Home 64272 Serene Stay,1128
+314,OYO Home 60377 Near Dn Regalia,1047
+315,OYO 36560 Desire in Khandagiri,1197
+316,OYO 60397 Cozy Stay Near ITER College,1114
+317,OYO 68300 Yellow Homes,933
+318,OYO 36505 Comfortable Stay,1635
+319,OYO 67823 Garden Inn,829
+320,OYO Home 62392 Luxirous,1028
+321,OYO 66584 New Jagamara Guest House,789
+322,OYO 60404 Home Manoranjan Mishra 13 SRNs,1047
+323,Sublime Home Stay,1935
+324,OYO 30102 Luxurious Stay in Bhubaneshwar,1427
+325,OYO 30201 Spacious 2BHK Near CET,2289
+326,Hotel Swarna,1273
+327,OYO Home 36462 Yellow Oak Near ITER,1322
+328,Shanti Bhavan,1635
+329,OTDC Panthanivas,2067
+330,Ashique Guest House (Non AC Room (Common Bathroom)),2312
+331,Kedar Gouri Guest House,622
+332,OYO 63834 Hotel Sadhvi Palace,832
+333,Stone Palace,4163
+334,FOUR SEASONS INN,1748
+335,Hotel Maa Jaya Durga,842
+336,OYO 30659 Pleasant 2BHK Railway Station,2220
+337,OYO 64921 Purple Villa,954
+338,Hotel Prabhu Krupa,1318
+339,OYO 62597 Home Charu Chandra Mohanty,1047
+340,Moon Light Home Stay,707
+341,OYO 62394 Home Sasmita Meher,1192
+342,Bapuji Guest House,2811
+343,OYO 69097 Hotel Vaiko,930
+344,Smart City Guest House,1560
+345,Hotel Sataakar,1560
+346,HOTEL NILAY RESIDENCY,1497
+347,Subhalaxmi Guest House,925
+348,Hotel New Ashirbad,936
+349,EDDA GUEST HOUSE,1657
+350,Chairosana Mansion,936
+351,TRIUMPH INN,1390
+352,capitalguesthouse,1170
+353,OYO 60360 Home Bhumananda9 9040513929 Pr,1184
+354,Kinginternational,1053
+355,BIBEK RESIDENCY,4830
+356,Swosti Premium,3221
+357,OYO 28262 Signature Homes,933
