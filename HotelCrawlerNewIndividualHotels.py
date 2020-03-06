@@ -3,9 +3,7 @@ from bs4 import BeautifulSoup
 from fake_useragent import UserAgent
 import random 
 from time import sleep
-import expedia
-import Goibibo
-import Hotelsdotcom
+import GoibiboHotels
 import pandas as pd
 from tkinter import *
 from PIL import Image, ImageTk
@@ -41,7 +39,7 @@ class Application(Frame):
     
         ua = UserAgent() # From here we generate a random user agent
         proxies = [] # Will contain proxies [ip, port]
-        otas = ['https://www.expedia.co.in','https://in.hotels.com','https://www.goibibo.com/hotels/']
+        otas = ['https://www.goibibo.com/hotels/']
         '''
         Retrieve latest proxies
         '''
@@ -92,21 +90,21 @@ class Application(Frame):
                     print('#' + str(1) + ': ' + my_ip)
                     temp = otas.index(url)
                     if temp == 0:
-                        df = expedia.parse(url, proxy, driver, inputs)
+                        df = GoibiboHotels.parse(url, proxy, driver, inputs)
                         if len(df) > 1:
-                            df.to_csv('datasetHotelNames/expedia.csv')
+                            df.to_csv('goibibo'+'searchKey'+'.csv')
                             df = []
                             break
                     if temp == 1:
                         df = Hotelsdotcom.parse(url, proxy, driver, inputs)
                         if len(df) > 1:
-                            df.to_csv('datasetHotelNames/Hotelsdotcom.csv')
+                            df.to_csv('Hotelsdotcom.csv')
                             df = []
                             break
                     if temp == 2:
-                        df = Goibibo.parse(url, proxy, driver, inputs)
+                        df = expedia.parse(url, proxy, driver, inputs)
                         if len(df) > 1:
-                            df.to_csv('datasetHotelNames/goibibo.csv')
+                            df.to_csv('expedia.csv')
                             df = []
                             break
                 except: # If error, delete this proxy and find another one
