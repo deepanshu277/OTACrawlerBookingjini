@@ -41,7 +41,6 @@ class Application(Frame):
         endDate = endDate.split('/')
     
         ua = UserAgent() # From here we generate a random user agent
-        proxies = [] # Will contain proxies [ip, port]
         #otas = ['https://www.expedia.co.in','https://in.hotels.com','https://www.goibibo.com/hotels/']
         otas = ['https://www.goibibo.com/hotels/']
         '''
@@ -60,18 +59,11 @@ class Application(Frame):
         Retrieve latest proxies
         '''
         def proxyGenerator():
-            proxies_req = Request('https://www.sslproxies.org/')
+            proxies_req = Request('http://list.didsoft.com/get?email=rajatavdutta@gmail.com&pass=r6gt4j&pid=http3000&showcountry=no&https=yes')
             proxies_req.add_header('User-Agent', ua.random)
             proxies_doc = urlopen(proxies_req).read().decode('utf8')
-            
-            soup = BeautifulSoup(proxies_doc, 'html.parser')
-            proxies_table = soup.find(id='proxylisttable')
-            
-            for row in proxies_table.tbody.find_all('tr'):
-                proxies.append({
-                'ip':   row.find_all('td')[0].string,
-                'port': row.find_all('td')[1].string
-              })
+            proxies = proxies_doc.split('\n')
+            return proxies
         '''
         errorProxies = []
         for proxy in proxies:
@@ -86,7 +78,7 @@ class Application(Frame):
         
         proxies = [x for x in proxies if x not in errorProxies]
         '''
-        proxyGenerator()
+        proxies = proxyGenerator()
         def random_proxy():
             return random.randint(0, len(proxies) - 1)
         
@@ -95,25 +87,26 @@ class Application(Frame):
         '''
         df = []
         for oneDate in dateRange:
-            inputs = [searchKey, oneDate, '01/01/2020']
+            inputs = [searchKey, oneDate, '01/05/2020']
             for url in otas:
                 proxy_index = random_proxy()
                 proxy = proxies[proxy_index]
                 while True: 
-                    driver = random.choice([1, 2])
+                    #driver = random.choice([1, 2])
+                    driver = 1
                     req = Request('http://icanhazip.com')
-                    req.set_proxy(proxy['ip'] + ':' + proxy['port'], 'http')
+                    req.set_proxy(proxy, 'http')
                     try:
                         my_ip = urlopen(req).read().decode('utf8')
                         print('#' + str(1) + ': ' + my_ip)
                         temp = otas.index(url)
-                        if temp == 2:
+                        if temp == 1:
                             df = expedia.parse(url, proxy, driver, inputs)
                             if len(df) > 1:
                                 df.to_csv('datasetHotelNames/expedia'+oneDate+'.csv')
                                 df = []
                                 break
-                        if temp == 1:
+                        if temp == 2:
                             df = Hotelsdotcom.parse(url, proxy, driver, inputs)
                             if len(df) > 1:
                                 df.to_csv('datasetHotelNames/Hotelsdotcom'+oneDate+'.csv')
@@ -132,7 +125,7 @@ class Application(Frame):
                         try:
                             proxy_index = random_proxy()
                         except:
-                            proxyGenerator()
+                            proxies = proxyGenerator()
                         proxy = proxies[proxy_index]
                 sleep(random.choice([1,2,3,4]))
 

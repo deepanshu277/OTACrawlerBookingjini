@@ -23,7 +23,7 @@ def parse(url, proxy, driver, inputs):
     checkInDate = inputs[1] #Format %d/%m/%Y
     checkOutDate = inputs[2] #Format %d/%m/%Y
     if driver == 1:
-        PROXY = proxy['ip'] + ':' + proxy['port'] # IP:PORT 
+        PROXY = proxy # IP:PORT 
         chrome_options = webdriver.ChromeOptions()
         chrome_options.add_argument('--proxy-server=%s' % PROXY)
         response = webdriver.Chrome(executable_path = r'C:\Users\TripleR\Downloads\chromedriver_win32\chromedriver.exe', chrome_options=chrome_options)

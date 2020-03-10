@@ -9,10 +9,12 @@ import pandas as pd
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 import pandas as pd
 #from xvfbwrapper import Xvfb
-hotets = pd.read_csv('datasetHotelNames/goibibo.csv')
-def parse(url, driver):
-    searchKey = 'Hotel Vintage Villa' # Change this to your city 
-    checkInDate = '07/03/2020' #Format %d/%m/%Y
+datee = input('Enter the Date ')
+hotels = pd.read_csv('datasetHotelNames/goibibo'+datee+'.csv')
+hotels = hotels['hotelName'].to_list()
+def parse(url, driver, hotel):
+    searchKey = hotel # Change this to your city 
+    checkInDate = datee #Format %d/%m/%Y
     checkOutDate = '08/03/2020' #Format %d/%m/%Y
     if driver == 1:
         response = webdriver.Chrome(executable_path = r'C:\Users\TripleR\Downloads\chromedriver_win32\chromedriver.exe')
@@ -92,4 +94,5 @@ def parse(url, driver):
         return df
     except:
         response.close()
-df = parse('https://www.goibibo.com/hotels/',1)
+for hotel in hotels:
+    df = parse('https://www.goibibo.com/hotels/', 1, hotel)   
